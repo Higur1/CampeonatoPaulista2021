@@ -12,10 +12,10 @@ public class GenericDAO {
 		
 		String hostName= "127.0.0.1";
 		String dbName="CampeonatoPaulista2021";
-		String user = "sa";
-		String senha = "Hungria123";
+		String user = "higor";
+		String senha = "123456";
 		Class.forName("net.sourceforge.jtds.jdbc.Driver");
-		String connect = String.format("jdbc:jtds:sqlserver://%s:1433;databaseName=%s;namedPipes=true;user=%s;password=%s",hostName, dbName, user, senha);
+		String connect = String.format("jdbc:jtds:sqlserver://%s:1433;databaseName=%s;user=%s;password=%s;instance=SQLEXPRESS;namedPipes=false",hostName, dbName, user, senha);
 		c= DriverManager.getConnection(connect);
 		
 		return c;
